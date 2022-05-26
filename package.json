@@ -2,7 +2,7 @@
     "name": "rollup-typescript-template",
     "version": "1.0.0",
     "description": "Simple rollup template with typescript support",
-    "main": "build/index.js",
+    "main": "dist/index.js",
     "repository": "https://github.com/sheeyang/rollup-typescript-template",
     "author": "Chew Shee Yang",
     "license": "MIT",
