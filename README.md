@@ -2,15 +2,44 @@
 
 ## Get started
 
+### Clone this repository using git
+
 ```
-# Clone this repository
 git clone https://github.com/sheeyang/rollup-typescript-template project
-# OR
+```
+
+with jest
+
+```
+git clone https://github.com/sheeyang/rollup-typescript-template.git project -b main-jest
+```
+
+### Or clone this repository using degit
+
+```
 npx degit sheeyang/rollup-typescript-template project
-# Go into the repository
+```
+
+with jest
+
+```
+npx degit sheeyang/rollup-typescript-template#main-jest project
+```
+
+### Go into the repository
+
+```
 cd project
-# Install dependencies
+```
+
+### Install dependencies
+
+```
 yarn
-# Build
+```
+
+### Build
+
+```
 yarn build
 ```
