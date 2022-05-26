@@ -6,7 +6,6 @@ import typescript from "@rollup/plugin-typescript";
 
 /** @type {import('rollup').RollupOptions} */
 const config = {
-    preserveEntrySignatures: false,
     treeshake: true,
     input: "./src/index.ts",
     output: {
