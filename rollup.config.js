@@ -1,11 +1,28 @@
-import merge from "deepmerge";
-import { createBasicConfig } from "@open-wc/building-rollup";
+import { nodeResolve } from "@rollup/plugin-node-resolve";
+import { babel } from "@rollup/plugin-babel";
+import { terser } from "rollup-plugin-terser";
+import del from "rollup-plugin-delete";
+import typescript from "@rollup/plugin-typescript";
 
-const baseConfig = createBasicConfig();
-
-export default merge(baseConfig, {
-    input: "./dist/index.js",
+/** @type {import('rollup').RollupOptions} */
+const config = {
+    preserveEntrySignatures: false,
+    treeshake: true,
+    input: "./src/index.ts",
     output: {
-        dir: "build",
+        format: "es",
+        dir: "dist",
+        plugins: [],
     },
-});
+    plugins: [
+        nodeResolve(),
+        babel({ babelHelpers: "bundled" }),
+        terser(),
+        del({
+            targets: ["dist/*"],
+        }),
+        typescript({ tsconfig: "./tsconfig.json" }),
+    ],
+};
+
+export default config;

@@ -1,7 +1,5 @@
 # Simple Rollup Typescript template
 
-Made with the help of [this tutorial](https://www.thisdot.co/blog/how-to-setup-a-typescript-project-using-rollup-js) with a few minor changes
-
 ## Get started
 
 ```
